@@ -26,4 +26,7 @@ for (i in 1:length(nonTD)) {
 }
 
 # each row in a csv file gives (in order): comment text, name of subreddit, vote score, 
-# flag for whether the comment is considered "controversial", flag for whether the OP is NSFW, and the datetime of the comment
+# flag for whether the comment is considered "controversial", 
+# flag for whether the OP is NSFW, and the datetime of the comment
+
+# next go to analyze_comments.R

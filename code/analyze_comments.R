@@ -17,7 +17,7 @@ p_load(randomForest,rpart,readr,RedditExtractoR,dplyr,RCurl,rjson,lubridate,
 
 TD_text <- NULL
 j <- 0
-for (i in length(TD)) {
+for (i in 1:length(TD)) {
   USER <- TD[i] %>% as.character()
   filename <- paste0("~/talking_trump/user_tables/TD/",USER,".csv")
   if (file.exists(filename)) {
@@ -35,7 +35,7 @@ for (i in length(TD)) {
 
 nonTD_text <- NULL
 j <- 0
-for (i in length(nonTD)) {
+for (i in 1:length(nonTD)) {
   USER <- nonTD[i] %>% as.character()
   filename <- paste0("~/talking_trump/user_tables/nonTD/",USER,".csv")
   if (file.exists(filename)) {
@@ -79,7 +79,6 @@ TD_word_counts <- words_filtered %>%
 TD_word_counts <- left_join(TD_word_counts,count_users,by="word") # add user counts and total counts into same dataframe
 
 ## create a usage score for each word: (word frequency)*(user frequency)
-TD_word_counts <- TD_word_counts %>% mutate(usage = ((n+1)/nTD)*((nusers+1)/total_users))
 
 write.csv(TD_word_counts,"~/talking_trump/results/TD_word_counts.csv")
 
@@ -109,8 +108,6 @@ nonTD_word_counts <- words_filtered %>%
   count(word, sort = TRUE)
 
 nonTD_word_counts <- left_join(nonTD_word_counts,count_users,by="word") # add user counts and total counts into same dataframe
-
-
 
 write.csv(nonTD_word_counts,"~/talking_trump/results/nonTD_word_counts.csv")
 

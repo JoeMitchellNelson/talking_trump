@@ -1,7 +1,7 @@
 require(pacman)
 
-p_load(randomForest,rpart,readr,RedditExtractoR,dplyr,RCurl,rjson,lubridate,
-       rvest,stringr,Hmisc,rattle,RColorBrewer,tidytext,tidyverse)
+p_load(rpart,readr,dplyr,RCurl,rjson,lubridate,
+       rvest,stringr,RColorBrewer,tidytext,tidyverse)
 
 
 # num_pages limits the number of comments to be scraped. currently set to a maximum of 4 pages (or 400 comments).
