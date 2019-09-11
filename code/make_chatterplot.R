@@ -1,6 +1,6 @@
 require(pacman)
 
-p_load(randomForest,rpart,readr,RedditExtractoR,dplyr,RCurl,rjson,lubridate,
+p_load(readr,dplyr,RCurl,rjson,lubridate,
        rvest,stringr,Hmisc,rattle,RColorBrewer,ddpcr,tidytext,tidyr,wordcloud,
        ggrepel,ggplot2)
 

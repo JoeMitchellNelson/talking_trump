@@ -1,7 +1,7 @@
 require(pacman)
 
-p_load(randomForest,rpart,readr,RedditExtractoR,dplyr,RCurl,rjson,lubridate,
-       rvest,stringr,Hmisc,rattle,RColorBrewer,ddpcr,tidytext,tidyr,wordcloud,
+p_load(rpart,readr,dplyr,RCurl,rjson,lubridate,
+       rvest,stringr,Hmisc,rattle,RColorBrewer,ddpcr,tidytext,tidyr,
        ggrepel,ggplot2)
 
 ### need to run get_comment_history.R to generate the csv files this code will call
